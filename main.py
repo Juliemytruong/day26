@@ -14,3 +14,16 @@ Black_count=data["Primary Fur Color"].value_counts()["Black"]
 print(Gray_count)
 print(Cinnamon_count)
 print(Black_count)
+
+# output=f"Gray {Gray_count}\nCinnamon {Cinnamon_count} \nBlack {Black_count}"
+# f=open("output.txt","a")
+# f.write(output)
+
+dic={
+    "FUR COLOUR":["Gray", "Cinnamon", "black"],
+    "count":[Gray_count,Cinnamon_count,Black_count]
+}
+
+dataframe=pandas.DataFrame(dic)
+dataframe.to_csv("output.csv")
+
