@@ -14,5 +14,12 @@
 #     print(temperatures)
 
 import pandas
+import statistics
+
 data=pandas.read_csv("weather_data.csv")
-print(data)
+data_dic=data.to_dict()
+print(data_dic)
+temp_list=data["temp"].to_list()
+print(temp_list)
+average_temp=statistics.mean(temp_list)
+print(average_temp)
